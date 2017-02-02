@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Techniques</title>
+    <link rel="stylesheet" type="text/css" href="css/row-limit.css">
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+        .box{
+            padding: 30px;
+            text-align: center;
+        }
+            .box .item{
+                display: inline-block;
+                vertical-align: top;
+                width: 300px;
+                text-align: left;
+                padding: 10px;
+            }
+    </style>
+</head>
+<body>
+
+    <p>* row-limit with ellipses work only in webkit</p>
+    <!-- row-limit -->
+    <ul class="box">
+        <li class="item">
+            <p>Limit of 1 row</p>
+            <p class="row-limit one">
+                Lorem ipsum dolor sit amet, verba volant, scripta manent consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </p>
+        </li>
+        <li class="item">
+            <p>Limit of 2 rows</p>
+            <p class="row-limit two">
+                Lorem ipsum dolor sit amet, verba volant, scripta manent consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </p>
+        </li>
+        <li class="item">
+            <p>Limit of 3 rows</p>
+            <p class="row-limit three">
+                Lorem ipsum dolor sit amet, verba volant, scripta manent consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </p>
+        </li>
+        <li class="item">
+            <p>Limit of 4 rows</p>
+            <p class="row-limit four">
+                Lorem ipsum dolor sit amet, verba volant, scripta manent consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </p>
+        </li>
+    </ul>
+
+</body>
+</html>

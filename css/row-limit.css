@@ -1,0 +1,46 @@
+.row-limit{
+    
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -o-box-orient: vertical;
+    box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+    .row-limit.one{
+        -webkit-line-clamp: 1;
+        -moz-line-clamp: 1;
+        -ms-line-clamp: 1;
+        -o-line-clamp: 1;
+        line-clamp: 1;
+    }
+
+    .row-limit.two{
+        -webkit-line-clamp: 2;
+        -moz-line-clamp: 2;
+        -ms-line-clamp: 2;
+        -o-line-clamp: 2;
+        line-clamp: 2;
+    }
+
+    .row-limit.three{
+        -webkit-line-clamp: 3;
+        -moz-line-clamp: 3;
+        -ms-line-clamp: 3;
+        -o-line-clamp: 3;
+        line-clamp: 3;
+    }
+
+    .row-limit.four{
+        -webkit-line-clamp: 4;
+        -moz-line-clamp: 4;
+        -ms-line-clamp: 4;
+        -o-line-clamp: 4;
+        line-clamp: 4;
+    }
