@@ -1,4 +1,3 @@
 # css-techniques
 
-> Accordion
-https://codepen.io/edussilva/pen/bGKGabe
+1. [Accordion](https://codepen.io/edussilva/pen/bGKGabe)
