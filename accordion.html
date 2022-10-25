@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accordion</title>
+    <style type="text/css">
+        
+        .ess-accordion{}
+        .ess-accordion__item{
+            margin-bottom: 20px;
+            box-shadow: 5px 5px 8px -5px rgba(0, 0, 0, .54);
+        }
+        .ess-accordion__item__title{
+            padding: 20px 74px 20px 30px;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 600;
+            color: #0073b7;
+            position: relative;
+            -webkit-transition: all 0.1s ease-out;
+            transition: all 0.1 ease-out;
+        }
+        .ess-accordion__item__title:hover{
+            cursor: pointer;
+            background-color: #f2f2f2;
+        }
+        .ess-accordion__item__title.active::after{
+            transform: rotate(-180deg);
+        }
+        .ess-accordion__item__title::before{
+            content: " "; 
+            width: 64px;
+            height: 100%;
+            background-color: #0073b7;
+            position: absolute;
+            z-index: 1; 
+            top: 0;
+            right: 0;
+        }
+        .ess-accordion__item__title::after{
+            content: "▼";
+            color: #ffffff;
+            font-size: 30px; 
+            background-repeat: no-repeat;
+            background-position: center; 
+            width: 64px;
+            height: 100%;
+            position: absolute;
+            z-index: 2; 
+            top: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            -webkit-transition: all 0.1s ease-out;
+            transition: all 0.1 ease-out;
+        }
+        .ess-accordion__body{
+            padding: 20px 30px;
+            display: none;
+        }
+        .ess-accordion__body > p{
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="ess-accordion">
+        <div class="ess-accordion__item">
+            <div class="ess-accordion__item__title ess-open">Lorem ipsum dolor sit amet</div>
+            <div class="ess-accordion__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+        <div class="ess-accordion__item">
+            <div class="ess-accordion__item__title ess-open">Lorem ipsum dolor sit amet</div>
+            <div class="ess-accordion__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+        <div class="ess-accordion__item">
+            <div class="ess-accordion__item__title ess-open">Lorem ipsum dolor sit amet</div>
+            <div class="ess-accordion__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(".ess-accordion .ess-open").on("click", function(e){
+            $(this).closest(".ess-accordion__item").find(".ess-accordion__body").slideToggle();
+            $(this).closest(".ess-accordion__item").find(".ess-accordion__item__title").toggleClass("active");
+        });
+    </script>
+</body>
+</html>
