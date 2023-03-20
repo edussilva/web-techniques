@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Estados e cidades</title>
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+        <fieldset>
+            <select id="ess-estado" required name="estado">
+                <option value="">Selecione o estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AM">Amazonas</option>
+                <option value="AP">Amapá</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="PR">Paraná</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SE">Sergipe</option>
+                <option value="SP">São Paulo</option>
+                <option value="TO">Tocantins</option>
+            </select>
+
+            <select id="ess-cidade" required name="cidade">
+                <option value="">Selecione a cidade</option>
+            </select>
+            <input type="hidden" name="ibge" id="ess-ibge">
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+
+        const seletorEstado = "#ess-estado";
+        const seletorCidade = "#ess-cidade";
+        const seletorIBGE = "#ess-ibge";
+
+        function setIBGE(id){
+            $(seletorIBGE).val(id);
+        }
+
+        function getMunicipios(uf){
+            var selectCidadeOptions = $(`${seletorCidade} option`).filter(function() { return this.value !== ""; });
+            selectCidadeOptions.remove();
+            $.ajax({
+                url : `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf}/municipios`,
+                type : "GET",
+                dataType: "json"
+            }).then(function(cidades){
+                $.each(cidades, function(index, item){
+                    $("<option>").val(item.nome).text(item.nome).data("ibge", item.id).appendTo($(seletorCidade));
+                });
+            }).catch(function(error){
+
+            });
+        }
+        $(function(){
+            $(seletorEstado).on("change", function(e){
+                getMunicipios($(this).val().toLowerCase());
+            });
+            $(seletorCidade).on("change", function(e){
+                if ($(this).val()) {
+                    setIBGE($(this).find("option:selected").data("ibge"));
+                }
+                else{
+                    setIBGE("");
+                }
+            });
+
+            if ($(seletorEstado).val()) {
+                getMunicipios($(seletorEstado).val().toLowerCase());
+            }
+        });
+    </script>
+</body>
+</html>
