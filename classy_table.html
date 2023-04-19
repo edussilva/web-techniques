@@ -5,11 +5,247 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Classy table</title>
     <style type="text/css">
-        
+        table td{
+            padding: 10px;
+        }
+
+        .ess-wraptable{
+            max-height: calc(100vh - 60px);
+            overflow-x: auto;
+        }
+        table.ess-table{
+            border: 0;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table.ess-table thead{
+            position: -webkit-sticky; 
+            position: sticky; 
+            top: 0;
+            z-index: 3;
+        }
+
+        table.ess-table th{
+            background-color: #ffffff;
+        }
+        table.ess-table .fixed{
+            position: -webkit-sticky;
+            position: sticky; 
+            left: 0;
+            z-index: 2;
+            background-color: #ffffff;
+        }
+        .grabbing table.ess-table tbody tr{
+            cursor: grabbing;
+        }
+
+
     </style>
 </head>
 <body>
+    <div style="max-width: 700px;margin: 60px auto;">
+        <div class="ess-wraptable">
+            <table class="ess-table">
+                <thead>
+                    <tr>
+                        <th rowspan="2" class="fixed">Table</th>
+                        <th colspan="2">Group A</th>
+                        <th colspan="2">Group B</th>
+                    </tr>     
+                    <tr class="">
+                        <th>Column 1</th>
+                        <th>Column 2</th>
+                        <th>Column 3</th>
+                        <th>Column 4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="fixed">Row1</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row2</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row3</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row4</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row5</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row6</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row7</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row8</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row9</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row10</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row11</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row12</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row13</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row14</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row15</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row16</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row17</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row18</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row19</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                    <tr>
+                        <td class="fixed">Row20</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                        <td>Loremipsumdolorsitametconsectetur.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
+    <script>
+        // Optional
+        function grabableElement(selector){
+            const slider = document.querySelector(selector);
+            let isDown = false;
+            let startX;
+            let startY;
+            let scrollLeft;
+            let scrollTop;
 
+            slider.addEventListener('mousedown', (e) => {
+                isDown = true;
+                slider.classList.add('grabbing');
+                startX = e.pageX - slider.offsetLeft;
+                startY = e.pageY - slider.offsetTop;
+                scrollLeft = slider.scrollLeft;
+                scrollTop = slider.scrollTop;
+            });
+            slider.addEventListener('mouseleave', () => {
+                isDown = false;
+                slider.classList.remove('grabbing');
+            });
+            slider.addEventListener('mouseup', () => {
+                isDown = false;
+                slider.classList.remove('grabbing');
+            });
+            slider.addEventListener('mousemove', (e) => {
+                if(!isDown) {
+                    return;
+                }
+                e.preventDefault();
+                const x = e.pageX - slider.offsetLeft;
+                const y = e.pageY - slider.offsetTop;
+                const walk = (x - startX) * 1; // speed
+                const walkY = (y - startY) * 1; // speed
+                slider.scrollLeft = scrollLeft - walk;
+                slider.scrollTop = scrollTop - walkY;
+            });
+        }
+
+        grabableElement(".ess-wraptable");        
+    </script>
 </body>
 </html>
