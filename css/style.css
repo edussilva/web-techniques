@@ -63,10 +63,21 @@ table {
     display: block;
 }
 
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+@media(max-width: 1023px){
+    .container{
+        padding: 0 10px;
+    }
+}
+
+
 .card-list{
     max-width: 600px;
     background-color: #fef2d9;
-    padding: 30px 30px;
+    padding: 20px 20px;
     margin: 0 auto 30px auto;
     border: 1px solid #f1dfbb;
     border-radius: 10px;
